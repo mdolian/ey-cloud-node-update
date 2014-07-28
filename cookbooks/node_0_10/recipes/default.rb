@@ -1,15 +1,16 @@
-if app_server? or util?
+if app_server? || util?
 
-    enable_package "net-libs/nodejs" do
+  enable_package "net-libs/nodejs" do
     version "0.10.28"
-end
+  end
  
-package "net-libs/nodejs" do
-  version "0.10.28"
-  action :install
-end
+  package "net-libs/nodejs" do
+    version "0.10.28"
+    action :install
+  end
  
-eselect "0.10.28" do
-  slot 'nodejs'
-
+  eselect "0.10.28" do
+    slot 'nodejs'
+  end
+  
 end
